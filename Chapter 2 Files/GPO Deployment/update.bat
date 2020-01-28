@@ -53,7 +53,7 @@ xcopy %GLBSYSMONBIN% %SYSMONDIR% /y
 xcopy %GLBSYSMONCONFIG% %SYSMONDIR% /y
 xcopy %GLBSIGCHECK% %SYSMONDIR% /y
 chdir %SYSMONDIR%
-%SYSMONBIN% -i %SYSMONCONF% -accepteula -h md5,sha256 -n -l
+%SYSMONBIN% -i %SYSMONCONF% -accepteula -h sha1,sha256,imphash -n -l
 sc config Sysmon64 start= auto
 goto :checkversion
 
